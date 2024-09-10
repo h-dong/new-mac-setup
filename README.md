@@ -79,7 +79,7 @@ Change "When performing a search" dropdown to `Search the Current Folder`.
 Copy the following and save to a text file e.g. `mac-apps`.
 
 ```txt
-hiddenbar
+jordanbaird-ice
 rectangle-pro
 stats
 itsycal
