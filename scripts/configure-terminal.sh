@@ -93,34 +93,22 @@ fi
 if ! command -v delta &> /dev/null; then
     brew install git-delta
 
-    echo 'Add the following to ~/.gitconfig'
-
     echo '
-
-
 [core]
     pager = delta
-
 [interactive]
     diffFilter = delta --color-only
-
 [delta]
     navigate = true    # use n and N to move between diff sections
     side-by-side = true
-
-
     # delta detects terminal colors automatically; set one of these to disable auto-detection
     # dark = true
     # light = true
-
 [merge]
     conflictstyle = diff3
-
 [diff]
     colorMoved = default
-
-
-'
+' >> ~/.gitconfig
 fi
 
 # Install tldr
@@ -153,7 +141,7 @@ fi
 # ============ Configure Wezterm ============
 
 # Copy the wezterm config to the home directory
-cp -p "$(dirname "$0")/../dotfiles/.wezterm.lua" ~/.wezterm.lua
+cp -p ./dotfiles/.wezterm.lua ~/.wezterm.lua
 
 # Copy the powerlevel10k config to the home directory
-cp -p "$(dirname "$0")/../dotfiles/.p10k.zsh" ~/.p10k.zsh
+cp -p ./dotfiles/.p10k.zsh ~/.p10k.zsh
