@@ -30,4 +30,27 @@ config.macos_window_background_blur = 10
 
 -- Add more configs here
 
+-- Enable alt-based keybindings
+config.keys = {
+	{
+		key = "LeftArrow",
+		mods = "ALT",
+		action = wezterm.action.SendString("\x1bb"), -- Esc + B
+	},
+	{
+		key = "RightArrow",
+		mods = "ALT",
+		action = wezterm.action.SendString("\x1bf"), -- Esc + F
+	},
+	{
+		key = "LeftArrow",
+		mods = "CMD",
+		action = wezterm.action.SendString("\x01"), -- Ctrl + A
+	},
+	{
+		key = "RightArrow",
+		mods = "ALT",
+		action = wezterm.action.SendString("\x05"), -- Ctrl + E
+	}
+}
 return config
